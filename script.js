@@ -1,100 +1,3 @@
-<!DOCtype html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <main>
-        <form>
-            <table width=85% border=1 cellspacing=2 cellpadding=3>
-
-                <tr>
-                    <td colspan=2 bgcolor="salmon" align="center">
-                        <h4>Calculadora de combinatoria</h4>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td colspan=2 bgcolor="antiquewhite">
-                        <p>
-                            Numero total de elementos: n =
-                            <input type=text size=4 maxlength=2 name="ntex">
-                        </p>
-                </tr>
-
-                <tr>
-                    <td colspan=2 bgcolor="antiquewhite">
-                        <input type=radio name=modelo checked> Permutaciones ordinarias
-                    </td>
-                </tr>
-
-                <tr bgcolor="antiquewhite">
-                    <td nowrap> <input type=radio name=modelo> Permutaciones con repeticion </td>
-                    <td> Cuantas veces aparece cada uno de los n
-                        elementos? (separar con comas)
-                        <input type=text size="10" name="nreptex">
-                    </td>
-                </tr>
-
-                <tr bgcolor="antiquewhite">
-                    <td> <input type=radio name=modelo> Variaciones ordinarias <br>
-                        <input type=radio name=modelo> Variaciones con repeticion <br>
-                        <input type=radio name=modelo> Combinaciones ordinarias <br>
-                        <input type=radio name=modelo> Combinaciones con repeticion <br>
-                    </td>
-                    <td>
-                        <p>
-                            Cuantos elementos entran en cada grupo? <br>
-                            m = <input type=text size="5" name="mtex">
-                        </p>
-                    </td>
-                </tr>
-
-                <tr bgcolor="antiquewhite">
-                    <td>
-                        <p>
-                            <input type=button name=B1 value="Calcular num de grupos" onclick="checkData(this.form)">
-
-                        </p>
-                    </td>
-
-                    <td align=p>
-                        <p>
-
-                            Resultado: num de grupos =
-                            <input type=text size=10 name="nitemstex">
-                        </p>
-                    </td>
-                </tr>
-
-                <tr bgcolor="antiquewhite">
-                    <td>
-                        <p>
-                            <input type=Button name=B2 value="Calcular y generar" onclick="genera(this.form)">
-                        <p>
-                            Para poder generar los grupos, tienes que escribir debajo los n elementos
-                            (separados por comas):
-                            <br>
-                            <input type=text size=25 name="elementostex">
-                        </p>
-                    </td>
-                    <td>
-                        <textarea name="grupostex" rows=10 cols=30> </textarea>
-                    </td>
-                </tr>
-
-            </table>
-        </form>
-    </main>
-</body>
-
-
-<script>
 
 
     // Variables globales	
@@ -192,7 +95,7 @@
         var correcta = checkInput(form, "genera");
         if (correcta == true) {
             calculate(form)
-            if (eval(form.nitemstex.value) < 99999999999999) {
+            if (eval(form.nitemstex.value) < 999999999) {
                 genera1(form)
             }
             else {
@@ -369,7 +272,3 @@
 
         form.nitemstex.value = prod
     }
-
-</script>
-
-</html>
